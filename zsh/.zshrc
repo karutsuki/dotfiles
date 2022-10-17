@@ -150,3 +150,5 @@ command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 # Alias
 alias wget-yuki='wget -r -np -nH --cut-dirs=2 --user=karutsuki --ask-password -R "index.html*"'
 
+# conda
+[ -f /opt/conda/etc/profile.d/conda.sh ] && source /opt/conda/etc/profile.d/conda.sh
