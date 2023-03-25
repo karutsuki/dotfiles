@@ -138,17 +138,15 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Homebrew
-[ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ ! -f /usr/share/doc/fzf/examples/key-bindings.zsh ]] || source /usr/share/doc/fzf/examples/key-bindings.zsh
+[[ ! -f /usr/share/doc/fzf/examples/completion.zsh ]] || source /usr/share/doc/fzf/examples/completion.zsh
 
 # zoxide
 command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
 # Alias
-alias wget-yuki='wget -r -np -nH --cut-dirs=2 --user=karutsuki --ask-password -R "index.html*"'
+alias wget-baymax='wget -r -np -nH --cut-dirs=1 --user=karutsuki --ask-password -R "index.html*"'
 
 # conda
 [ -f /opt/conda/etc/profile.d/conda.sh ] && source /opt/conda/etc/profile.d/conda.sh
